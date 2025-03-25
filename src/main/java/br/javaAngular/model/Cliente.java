@@ -1,9 +1,7 @@
 package br.javaAngular.model;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Entity
 @Table(name = "clientes")
 public class Cliente {
@@ -43,5 +41,6 @@ public class Cliente {
     public String toString() {
         return "Cliente{" + "nome='" + nome + '\'' + ", idade=" + idade + ", cidade='" + cidade + '\'' + '}';
     }
+
 }
 
