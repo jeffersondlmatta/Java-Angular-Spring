@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class Controller {
 
     @Autowired
@@ -24,6 +25,17 @@ public class Controller {
     {
        return acao.findAll();
     }
+
+    @PutMapping("/")
+    public Cliente editar(@RequestBody Cliente c){
+        return acao.save(c);
+    }
+
+    @DeleteMapping("/{id}")
+    public void remover(@PathVariable long id){
+        acao.deleteById(id);
+    }
+
 
 
 
